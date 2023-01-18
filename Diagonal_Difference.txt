@@ -1,0 +1,11 @@
+int diagonalDifference(vector<vector<int>> arr) {
+    int len = arr.size();
+    int d1 = 0, d2 = 0;
+    int col = len-1;
+    for(int i = 0; i < len; i++){
+        d1 += arr[i][i];
+        d2 += arr[col--][i];
+    }
+    return abs(d2-d1);
+}
+
