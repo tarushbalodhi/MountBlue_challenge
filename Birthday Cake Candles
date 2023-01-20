@@ -1,0 +1,11 @@
+
+int birthdayCakeCandles(vector<int> c) {
+    int max = *max_element(c.begin(), c.end());
+    int count = 0;
+        for(int i = 0; i < c.size(); i++){
+            if(c[i] == max){
+                count++;
+            }
+        }
+    return count;
+}
