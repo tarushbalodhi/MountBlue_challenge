@@ -1,0 +1,20 @@
+int getMoneySpent(vector<int> keyboards, vector<int> drives, int b) {
+   vector<int> price;
+        int maxi, total;
+        
+        for(unsigned int i = 0; i < keyboards.size(); i++){
+                for(unsigned int j = 0; j < drives.size(); j++){
+                        total = keyboards[i] + drives[j];
+                         if(total <= b){
+                        price.push_back(total);
+                          }
+                }     
+        }
+        maxi = *max_element(price.begin(), price.end());
+       
+        if(!price.empty()){
+           return maxi;    
+        } 
+        
+        return -1;
+}
