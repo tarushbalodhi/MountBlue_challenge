@@ -1,0 +1,9 @@
+long marcsCakewalk(vector<int> calorie) {
+        long int ans = 1, sum = 0;
+        sort(calorie.begin(), calorie.end(), greater<int>());
+        for( int i = 0 ; i < calorie.size(); i++){
+                sum = sum + (calorie[i] * ans);
+                ans *= 2;
+        }
+        return sum;
+}
